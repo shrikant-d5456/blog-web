@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const dataRoutes = require("./routes/dataRoutes");
+const aboutRoutes = require("./routes/aboutRoutes");
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use("/api/data", dataRoutes);
+app.use("/api/about", aboutRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI, {
