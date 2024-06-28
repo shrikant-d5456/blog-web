@@ -1,15 +1,20 @@
 # blog-web
 it is simple react project
 
-# dependency
+## dependency
+
 npm create vite@latest blog-web
+
 npm install
+
 npm react-route-dom
+
 npm install -D tailwindcss postcss autoprefixer
+
 npx tailwindcss init -p
 
 
-# tailwind.config.js
+## tailwind.config.js
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -23,7 +28,7 @@ export default {
   plugins: [],
 }
 
-# index.css
+## index.css
 
 @tailwind base;
 @tailwind components;
