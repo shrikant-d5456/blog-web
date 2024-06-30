@@ -1,5 +1,3 @@
-const mongoose = require("mongoose");
-
 const aboutSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -10,6 +8,8 @@ const aboutSchema = new mongoose.Schema({
     required: true,
   },
 });
+
+aboutSchema.index({ title: "text", description: "text" });
 
 const About = mongoose.model("About", aboutSchema);
 
